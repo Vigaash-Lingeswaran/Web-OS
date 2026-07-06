@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+
+  <body>
+
+    <h1>WELCOME TO MY OS</h1>
+    <h2>Tamil Cinema</h2>
+    <p>Tamil cinema, also known as Kollywood, is one of the most diverse cinema styles in the world. From genres of mystery to comedy, and all the way to masterful music, tamil cinema has it all.</p>
+    <img src="./images.jpeg"/>
+    <a href="https://www.imdb.com/interest/in0000235/"imdb</a>
+  </body>
+
+</html
