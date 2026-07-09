@@ -61,7 +61,10 @@ function closewindow(element)
 
 function openwindow (element)
 {
-    element.style.display = "flex"
+    element.style.display = "flex-direction: column";
+    Biggestindex++;
+    element.style.zIndex =Biggestindex;
+    topbar.style.zIndex = Biggestindex + 1;
 }
 
 welcomescreenclose.addEventListener("click",
@@ -79,3 +82,73 @@ function ()
     openwindow(welcomeScreen);
 }
 );
+
+var selectedIcon = undefined
+
+
+function selectIcon(element)
+{
+  element.classList.add("Selected")
+  selectedIcon = element
+}
+
+function deselectIcon (element)
+{
+  element.classList.remove("Selected")
+  selectedIcon = undefined
+}
+
+function handleicontap(element)
+{
+  if(element.classList.contains("selected"))
+    {
+      deselectIcon(element)
+      openwindow(window)
+    }
+  else
+    {
+      selectIcon(element)
+    }
+}
+
+dragElement(document.querySelector("#ranker"))
+
+var rankerscreen = document.querySelector("ranker")
+var rankerscreenclose = document.querySelector("rankerclose")
+
+rankerscreenclose.addEventListener ("click", 
+  () => closewindow(rankerscreen)
+);
+
+var Biggestindex =1;
+
+function addWindowTapHandling (element)
+{
+  element.addEventListener("mousedown", () =>
+    handleWindowtap(element)
+  )
+}
+
+function addWindowTapHandling (welcomeScreen)
+{
+  welcomeScreen.addEventListener("mousedown", () =>
+    handleWindowtap(element)
+  )
+}
+
+function addWindowTapHandling (rankerscreen)
+{
+  rankerscreen.addEventListener("mousedown", () =>
+    handleWindowtap(element)
+  )
+}
+
+function handleWindowtap (element)
+{
+  Biggestindex++;
+  element.style.zIndex = Biggestindex;
+  topbar.style.zIndex = Biggestindex + 1;
+  deselectIcon(selectedIcon)
+}
+
+var topbar = document.querySelector("#top")

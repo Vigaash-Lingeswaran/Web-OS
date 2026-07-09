@@ -9,7 +9,7 @@
 
     border: 4mm ridge;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     border-radius: 20px;
     position: absolute;
     backdrop-filter: blur(4px);
