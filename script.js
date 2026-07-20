@@ -316,13 +316,24 @@ snakescreenopen.addEventListener ("click",
   }
 );
 
-snakeplay.addEventListener ("click", 
-  function ()
+dragElement(document.querySelector("#snakegame"))
+
+var breakoutscreen = document.querySelector("#Breakoutgame")
+var breakoutscreenopen = document.querySelector("#DesktopApp3")
+var breakoutscreenclose = document.querySelector("#breakoutclose")
+
+breakoutscreenclose.addEventListener ("click", 
+  function() 
   {
-    console.log("The button was clicked! Preparing to open the next page...");
-
-
-    window.location.href = "snake.html"; 
+    closewindow(breakoutscreen);
   }
+);
 
-)
+breakoutscreenopen.addEventListener ("click", 
+  function() 
+  {
+    openwindow(breakoutscreen);
+  }
+);
+
+dragElement(document.querySelector("#Breakoutgame"))

@@ -82,7 +82,7 @@
     </div>
     </div>
 
-    <div class= "window" id= "snakegame" style = "position: absolute; display: none; top: 60%; left: 80%; transform: translate(-50%, -50%); background-color:#F9E4BC; border:4mm ridge ; width: fit-content; border-radius: 20px; padding: 20px; backdrop-filter: blur(10px)">
+    <div class= "window" id= "snakegame" style = "position: absolute; display: none; top: 60%; left: 80%; transform: translate(-50%, -50%); background-color:#F9E4BC; border:4mm ridge ; width: fit-content; border-radius: 20px; padding: 20px; backdrop-filter: blur(10px); cursor: grab;">
         <div class = "windowheader" id="snakeheader" style = "width: 100%; display:flex; align-items: center; cursor: grab; justify-content: space-between; margin-top: 10px;">
             <p class = "headertext" style = "margin: 0px; color:#6f0000; font-weight: 500; text-align: center;">
                 <dfn>Snake Game</dfn>
@@ -119,8 +119,7 @@
                 var canvas = document.getElementById('game');
                 var context = canvas.getContext('2d');
 
-                // the canvas width & height, snake x & y, and the apple x & y, all need to be a multiples of the grid size in order for collision detection to work
-                // (e.g. 16 * 25 = 400)
+                
                 var grid = 16;
                 var count = 0;
 
@@ -128,14 +127,11 @@
                 x: 160,
                 y: 160,
 
-                // snake velocity. moves one grid length every frame in either the x or y direction
                 dx: grid,
                 dy: 0,
 
-                // keep track of all grids the snake body occupies
                 cells: [],
 
-                // length of the snake. grows when eating an apple
                 maxCells: 4
                 };
                 var apple = {
@@ -143,17 +139,14 @@
                 y: 320
                 };
 
-                // get random whole numbers in a specific range
-                // @see https://stackoverflow.com/a/1527820/2124254
+               
                 function getRandomInt(min, max) {
                 return Math.floor(Math.random() * (max - min)) + min;
                 }
 
-                // game loop
                 function loop() {
                 requestAnimationFrame(loop);
 
-                // slow game loop to 15 fps instead of 60 (60/15 = 4)
                 if (++count < 4) {
                     return;
                 }
@@ -161,11 +154,9 @@
                 count = 0;
                 context.clearRect(0,0,canvas.width,canvas.height);
 
-                // move snake by it's velocity
                 snake.x += snake.dx;
                 snake.y += snake.dy;
 
-                // wrap snake position horizontally on edge of screen
                 if (snake.x < 0) {
                     snake.x = canvas.width - grid;
                 }
@@ -173,7 +164,6 @@
                     snake.x = 0;
                 }
 
-                // wrap snake position vertically on edge of screen
                 if (snake.y < 0) {
                     snake.y = canvas.height - grid;
                 }
@@ -181,38 +171,29 @@
                     snake.y = 0;
                 }
 
-                // keep track of where snake has been. front of the array is always the head
                 snake.cells.unshift({x: snake.x, y: snake.y});
 
-                // remove cells as we move away from them
                 if (snake.cells.length > snake.maxCells) {
                     snake.cells.pop();
                 }
 
-                // draw apple
                 context.fillStyle = 'red';
                 context.fillRect(apple.x, apple.y, grid-1, grid-1);
 
-                // draw snake one cell at a time
                 context.fillStyle = 'green';
                 snake.cells.forEach(function(cell, index) {
 
-                    // drawing 1 px smaller than the grid creates a grid effect in the snake body so you can see how long it is
                     context.fillRect(cell.x, cell.y, grid-1, grid-1);
 
-                    // snake ate apple
                     if (cell.x === apple.x && cell.y === apple.y) {
                     snake.maxCells++;
 
-                    // canvas is 400x400 which is 25x25 grids
                     apple.x = getRandomInt(0, 25) * grid;
                     apple.y = getRandomInt(0, 25) * grid;
                     }
 
-                    // check collision with all cells after this one (modified bubble sort)
                     for (var i = index + 1; i < snake.cells.length; i++) {
 
-                    // snake occupies same space as a body part. reset game
                     if (cell.x === snake.cells[i].x && cell.y === snake.cells[i].y) {
                         snake.x = 160;
                         snake.y = 160;
@@ -228,42 +209,270 @@
                 });
                 }
 
-                // listen to keyboard events to move the snake
                 document.addEventListener('keydown', function(e) {
-                // prevent snake from backtracking on itself by checking that it's
-                // not already moving on the same axis (pressing left while moving
-                // left won't do anything, and pressing right while moving left
-                // shouldn't let you collide with your own body)
+                
 
-                // left arrow key
                 if (e.which === 37 && snake.dx === 0) {
                     snake.dx = -grid;
                     snake.dy = 0;
                 }
-                // up arrow key
                 else if (e.which === 38 && snake.dy === 0) {
                     snake.dy = -grid;
                     snake.dx = 0;
                 }
-                // right arrow key
                 else if (e.which === 39 && snake.dx === 0) {
                     snake.dx = grid;
                     snake.dy = 0;
                 }
-                // down arrow key
                 else if (e.which === 40 && snake.dy === 0) {
                     snake.dy = grid;
                     snake.dx = 0;
                 }
                 });
 
-                // start the game
                 requestAnimationFrame(loop);
                 </script>
                 </body>
                 </html>
             </div>
        </div>
+    </div>
+    <div id="DesktopApp3" style="width: 90px; height: 90px;cursor: pointer; padding-top: 64px; padding-left: 64px;">
+        <div style="text-align: center; padding: 18px; filter: drop-shadow(0 0 10px black); width: fit-content">
+      <img src="Breakout_OG-logo.jpg" style="width: 90px; height: 90px; border-radius: 18px;">
+      <p style="margin: 0px; color: #FFFDD0; ">Breakout Game</p>
+        </div>
+    </div>
+
+    <div class= "window" id= "Breakoutgame" style = "position: absolute; display: none; top: 60%; left: 80%; transform: translate(-50%, -50%); background-color:#F9E4BC; border:4mm ridge ; width: fit-content; border-radius: 20px; padding: 20px; backdrop-filter: blur(10px); cursor: grab;">
+        <div class = "windowheader" id="breakoutheader" style = "width: 100%; display:flex; align-items: center; cursor: grab; justify-content: space-between; margin-top: 10px;">
+            <p class = "headertext" style = "margin: 0px; color:#6f0000; font-weight: 500; text-align: center;">
+                <dfn>Breakout game</dfn>
+            </p>
+            <div style = "width: 20px; margin-right: 14px; height: 20px;">
+            </div>
+            <p class = "closebutton" style= "cursor: pointer; font-size: x-large; margin-left: 14px; " id = "breakoutclose">
+                🎥
+            </p>
+        </div> 
+        <div style = "background-color: #F9E4BC; margin: auto; border-radius: 14px; width: 520px; height: fit-content; padding: 20px; overflow: hidden;">
+             <h1 style = " cursor: pointer; font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif; text-align: center; color: #6f0000"> <strong><i>Breakout</i></strong> </h1>
+             <h1 style = " cursor: pointer; font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif; text-align: center; color: #6f0000"> <strong>Use Arrow Keys to Move!</strong> </h1>
+            <div style = "background-color: #F9E4BC; margin: auto;">
+                <!DOCTYPE html>
+                <html>
+                <head>
+                <meta charset="UTF-8">
+                <style>
+                    html, body{
+                        height: 90%;
+                        margin: 0;
+                    }
+            
+                </style>
+                </head>
+                <body>
+                    <canvas width = "400" height = "500" id="game"></canvas>
+                    
+                    <script>
+                        const canvas = document.getElementById("game");
+                        const context = canvas.getContext("2d");
+                        const level1 = [
+                            [],
+                            [],
+                            [],
+                            [],
+                            [],
+                            [],
+                            ['R','R','R','R','R','R','R','R','R','R','R','R','R','R'],
+                            ['R','R','R','R','R','R','R','R','R','R','R','R','R','R'],
+                            ['O','O','O','O','O','O','O','O','O','O','O','O','O','O'],
+                            ['O','O','O','O','O','O','O','O','O','O','O','O','O','O'],
+                            ['G','G','G','G','G','G','G','G','G','G','G','G','G','G'],
+                            ['G','G','G','G','G','G','G','G','G','G','G','G','G','G'],
+                            ['Y','Y','Y','Y','Y','Y','Y','Y','Y','Y','Y','Y','Y','Y'],
+                            ['Y','Y','Y','Y','Y','Y','Y','Y','Y','Y','Y','Y','Y','Y']
+                            ];
+
+                        const colordef = {
+                            'R': 'red',
+                            'O': 'orange',
+                            'G': 'green',
+                            'Y': 'yellow',
+
+                        };
+
+                        const brickgap =2;
+                        const brickwidth =25;
+                        const brickheight =12;
+
+                        const wallSize =12;
+                        const bricks = [];
+
+                        for (let row =0; row<level1.length; row++){
+                            for (let col =0; col<level1[row].length; col++){
+                                const colorcode = level1[row][col];
+
+                                bricks.push(
+                                    {
+                                        x: wallSize+(brickwidth =brickgap) *col,
+                                        y:wallSize +(brickheight+brickgap) *row, 
+                                        color: colordef[colorcode],
+                                        width: brickwidth,
+                                        height: brickheight,
+                                    });
+                            }
+                        }
+
+                        const paddle ={
+                            x: canvas.width/2 - brickwidth/2,
+                            y: 440, 
+                            width : brickwidth,
+                            height : brickheight,
+
+                            dx:0
+                        };
+
+                        const ball ={
+                            x: 130, 
+                            y:260,
+                            width :5,
+                            height:5,
+
+                            speed: 2,
+
+                            dx: 0,
+                            dy:0
+                        };
+
+                        function collides(object1, object2){
+                            return
+                                    object1.x < object2.x + object2.width &&
+                                    object1.x + object1.width > object2.x &&
+                                    object1.y < object2.y + object2.height &&
+                                    object1.y +object1.height > obejct2.y;
+                                
+                        }
+
+                        function loop(){
+                            requestAnimationFrame(loop);
+                            context.clearRect(0,0,canvas.width, canvas.height);
+                        
+
+                        paddle.x += paddle.dx;
+
+                        if (paddle.x <wallSize)
+                        {
+                            paddle.x = wallSize
+                        }
+                        else if (paddle.x +brickWidth > canvas.width - wallSize){
+                            paddle.x = canvas.width -wallSize - brickWidth;
+                        }
+
+                        ball.x += ball.dx;
+                        ball.y += ball.dy;
+
+                        if ( ball.x <wallSize){
+                            ball.x = wallSize;
+                            ball.dx *= -1;
+                        }
+                        else if (ball.x +ball.width > canvas.width -wallSize){
+                            ball.x = canvas.width - wallSize - ball.width;
+                            ball.dx *= -1;
+                        }
+
+                        if (ball.y <wallSize)
+                        {
+                            ball.y = wallSize;
+                            ball.dy *= -1;
+                        }
+
+                        if (ball.y>canvas.height)
+                        {
+                            ball.x = 130;
+                            ball.y = 260;
+                            ball.dx =0;
+                            ball.dy =0;
+                        }
+
+                        if (collides(ball,paddle))
+                        {
+                            ball.dy *= -1;
+
+                            ball.y = paddle.y - ball.height;
+                        }
+
+                        for (let i =0; i< bricks.length; i++)
+                        {
+                            const brick = bricks[i];
+
+                            if (collides(ball, brick))
+                            {
+                                bricks.splice(i, 1);
+
+                                if (ball.y +ball.height -ball.speed <=brick.y || ball.y >=brick.y +brick.height -ball.speed)
+                                {
+                                    ball.dy *= -1;
+                                }
+
+                                else {
+                                    ball.dx *=1;
+                                }
+                                break;
+                            }
+                        }
+                    
+                        context.fillStyle = '#6f0000';
+                        context.fillRect(0, 0, canvas.width, wallSize);
+                        context.fillRect(0, 0, wallSize, canvas.height);
+                        context.fillRect(canvas.width - wallSize, 0, wallSize, canvas.height);
+
+                        if (ball.dx || ball.dy)
+                        {
+                            context.fillRect(ball.x, ball.y, ball.width, ball.height);
+                        }
+
+                        bricks.forEach (function(brick){
+
+                            context.fillStyle = brick.color;
+                            context.fillRect(brick.x, brick.y, brick.width, brick.height);
+                        });
+
+                        context.fillStyle = "cyan";
+                        context.fillRect(paddle.x, paddle.y, paddle.width, paddle.height);
+                    }
+
+                    document.addEventListener('keydown', function (e){
+
+                        if (e.which===37){
+                            paddle.dx =3;
+                        }
+                        else if (e.which===39)
+                        {
+                            paddle.dx =3;
+                        }
+
+                        if (ball.dx===0 && ball.dy ===0 && e.which ===32)
+                        {
+                            ball.dx = ball.speed;
+                            ball.dy = ball.speed
+                        }
+                    });
+
+                    document.addEventListener('keyup', function (e){
+
+                        if (e.which ===37 || e.which ===39)
+                        {
+                            paddle.dx =0;
+                        }
+                    });
+
+                    requestAnimationFrame(loop);
+
+                    </script>
+
+                </body>
+                </html>
 
     
     <script src= "script.js">
