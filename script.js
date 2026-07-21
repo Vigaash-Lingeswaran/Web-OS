@@ -339,5 +339,28 @@ breakoutscreenopen.addEventListener ("click",
 
 dragElement(document.querySelector("#Breakoutgame"))
 
+var calculatorscreen = document.querySelector("#calculator")
+var calculatorscreenopen = document.querySelector("#DesktopApp4")
+var calculatorscreenclose = document.querySelector("#calculatorclose")
+
+calculatorscreenclose.addEventListener ("click", 
+  function() 
+  {
+    closewindow(calculatorscreen);
+  }
+);
+
+calculatorscreenopen.addEventListener ("click", 
+  function() 
+  {
+    openwindow(calculatorscreen);
+    
+  }
+);
+
+dragElement(document.querySelector("#calculator"))
+
+
+
 
 
