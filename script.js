@@ -333,7 +333,11 @@ breakoutscreenopen.addEventListener ("click",
   function() 
   {
     openwindow(breakoutscreen);
+    
   }
 );
 
 dragElement(document.querySelector("#Breakoutgame"))
+
+
+
