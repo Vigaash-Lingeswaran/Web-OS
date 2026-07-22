@@ -359,8 +359,3 @@ calculatorscreenopen.addEventListener ("click",
 );
 
 dragElement(document.querySelector("#calculator"))
-
-
-
-
-

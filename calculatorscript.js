@@ -22,7 +22,8 @@ function Delete()
     display.value = display.value.slice(0, -1);
 }
 
-function clear()
+function CLEAR()
 {
-    document.getElementById('result').value = ' ';
+    document.getElementById('result') = " ";
+    display.value = ' ';
 }
