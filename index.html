@@ -2,17 +2,18 @@
 <html>
     <title>Tamil Cinema OS</title>
     <head>
-        <link rel = "stylesheet" href = "styles.css">
+        <link rel = "stylesheet" href = "style.css">
+        <meta name="referrer" content="strict-origin-when-cross-origin">
     </head>
   <body style = "background-image: url(CreamVintageGroupProjectPresentation.jpg); background-size: cover; background-color: transparent; font-family: OCR A Std,monospace" >
-    <div id = "top" style = "justify-content: space-between; background-color: rgb(0, 0,0, 0.25); position: absolute; width: 100%; display: flex; backdrop-filter: blur(10px); ">
-        <p id = "Welcomeopen" style = "padding: 4px 12px;margin-left: 16px; border-radius: 14px; color:#FFFDD0; font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; cursor: pointer;">
+    <div class = "top" id = "top" style = "justify-content: space-between; background-color: rgb(0, 0,0, 0.25); position: absolute; width: 100%; display: flex; backdrop-filter: blur(10px); ">
+        <p class = "toptext" id = "Welcomeopen" style = "padding: 4px 12px;margin-left: 16px; border-radius: 14px; color:#FFFDD0; font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; cursor: pointer;">
             Tamil Cinema OS
         </p>
-        <p style = "border-radius: 14px;margin-left: 16px; padding: 4px 12px; color:#FFFDD0;  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif ">
+        <p class = "toptext" style = "border-radius: 14px;margin-left: 16px; padding: 4px 12px; color:#FFFDD0;  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif ">
             🎞️ Absolute Cinema! 🎥
         </p>
-        <p id="timeElement" style ="padding: 4px 12px;border-radius: 14px;margin-left: 16px; margin-right: 16px; color:#FFFDD0; font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif">
+        <p class = "toptext" id="timeElement" style ="padding: 4px 12px;border-radius: 14px;margin-left: 16px; margin-right: 16px; color:#FFFDD0; font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif">
         </p>
     </div>
 
@@ -37,7 +38,7 @@
     </div>
 
 
-    <div id="DesktopApp1" style="width: 90px; height: 90px;cursor: pointer; padding-top: 64px; padding-left: 64px;">
+    <div  class = "DesktopApp" id="DesktopApp1" style="width: 90px; height: 90px;cursor: pointer; padding-top: 64px; padding-left: 64px;">
     <div style="text-align: center; padding: 18px; filter: drop-shadow(0 0 10px black); width: fit-content">
       <img src="Untitleddesign(1).png" style="width: 90px; height: 90px; border-radius: 18px;">
       <p style="margin: 0px; color: #FFFDD0; ">Kollywood Notes</p>
@@ -78,7 +79,7 @@
         </div>
     </div>
     
-    <div id="DesktopApp2" style="width: 90px; height: 90px;cursor: pointer; padding-top: 64px; padding-left: 64px;">
+    <div class = "DesktopApp" id="DesktopApp2" style="width: 90px; height: 90px;cursor: pointer; padding-top: 64px; padding-left: 64px;">
     <div style="text-align: center; padding: 18px; filter: drop-shadow(0 0 10px black); width: fit-content">
       <img src="unnamed(1).png" style="width: 90px; height: 90px; border-radius: 18px;">
       <p style="margin: 0px; color: #FFFDD0; ">Snake Game</p>
@@ -99,7 +100,10 @@
         <div style = "background-color: #F9E4BC; margin: auto; border-radius: 14px; width: 520px; height: fit-content; padding: 20px; overflow: hidden;">
             <h1 style = " font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif; text-align: center; color: #6f0000"> <strong> Welcome to the <i>Snake Game</i>!</strong> </h1>
              <h1 style = " cursor: pointer; font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif; text-align: center; color: #6f0000"> <strong>Use Arrow Keys to Move!</strong> </h1>
-            <div style = "background-color: #F9E4BC; margin: auto;"> 
+             <br>
+             <hr style = " background-color: #6f0000">
+             <br>
+             <div style = "background-color: #F9E4BC; margin: auto;"> 
             </div>
             <br>
             <br>
@@ -110,7 +114,7 @@
        </div>
     </div>
     
-    <div id="DesktopApp3" style="width: 90px; height: 90px;cursor: pointer; padding-top: 64px; padding-left: 64px;">
+    <div class = "DesktopApp" id="DesktopApp3" style="width: 90px; height: 90px;cursor: pointer; padding-top: 64px; padding-left: 64px;">
         <div style="text-align: center; padding: 18px; filter: drop-shadow(0 0 10px black); width: fit-content">
             <img src="Breakout_OG-logo.jpg" style="width: 90px; height: 90px; border-radius: 18px;">
             <p style="margin: 0px; color: #FFFDD0; ">Breakout Game</p>
@@ -130,16 +134,18 @@
              <h1 style = " cursor: pointer; font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif; text-align: center; color: #6f0000"> <strong><i>Breakout</i></strong> </h1>
              <h1 style = " cursor: pointer; font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif; text-align: center; color: #6f0000"> <strong>Use Arrow Keys to Move!</strong> </h1>
              <h1 style = " cursor: pointer; font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif; text-align: center; color: #6f0000"> <strong>Tap the Space Bar to start!</strong> </h1>
-
+             <br>
+             <hr style = " background-color: #6f0000">
+             <br>
             <div style = "background-color: #F9E4BC; margin: auto;">
             </div>
             <div>
-                <iframe src="breakout.html" width="82%" height="500px" style="border:none; margin: auto;"></iframe>
+                <iframe src="breakout.html" width="83.5%" height="550px" style="border:none; margin: auto;"></iframe>
             </div>  
         </div>
     </div>
     
-    <div id = "DesktopApp4" style = "width: 90px; height: 90px; cursor: pointer; padding-top: 64px; padding-left: 64px;">
+    <div class = "DesktopApp" id = "DesktopApp4" style = "width: 90px; height: 90px; cursor: pointer; padding-top: 64px; padding-left: 64px;">
         <div style = "text-align: center; padding: 18px; filter: drop-shadow(0 0 10px black); width: fit-content;">
             <img src = "calculator-7181192_640.png" style = "width: 90px; height: 90px; border-radius: 18px;">
             <p style = "margin: 0px; color: #FFFDD0">Calculator</p>
@@ -163,8 +169,213 @@
             </div>  
         </div>
     </div>
+    
 
+    <div class = "DesktopApp" id = "DesktopApp5" style = " width: 90px; height: 90px; cursor: pointer; padding-top: 64px; padding-left: 64px">
+        <div style = "text-align: center; padding: 18px; filter: drop-shadow(0 0 10px)">
+            <img src = "m84hjdvdt2p11.jpg" style = " width: 90px; height: 90px; border-radius: 18px;">
+            <p style = "margin: 0px; color: #FFFDD0">Youtube</p>
+        </div>
+    </div> 
+
+    <div class = "window" id = "youtube" style = "position: absolute; display: none; top: 30%; left: 50%; transform: translate (-50%, -50%); background-color: #F9E4BC; border: 4mm ridge; width: fit-content; border-radius: 20px; padding:20px; backdrop-filter: blur(10px); cursor: grab">
+        <div class = "windowheader" id ="youtubeheader" style = "width: 100%; display:flex; align-items: center; cursor: grab; justify-content: space-between; margin-top: 10px;">
+            <p class = "headertext" style = "margin: 0px; color: #6f0000; font-weight: 500; text-align: center;">
+                <dfn>Kollywood Trailers</dfn>
+            </p>
+            <p class = "closebutton" style = "cursor:pointer; font-size: x-large; margin-left: 14px" id = "youtubeclose">
+                🎥
+            </p>
+
+        </div>
+        <div style = "background-color: #F9E4BC; margin: auto; align-items:center; border-radius: 14px; width: 520px; height: fit-content; padding: 20px; overflow: hidden;">
+            <div style = "background-color: #F9E4BC; margin: auto;">
+            </div>
+            <div>
+                <h1 style =" font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif; text-align: center; color: #6f0000"><strong>Kollywood Trailers</strong></h1>
+                <h1 style = " font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif; text-align: center; color: #6f0000">Watch some of the greatest Kollywood Trailers!</h1>
+                <br>
+                <hr style = " background-color: #6f0000">
+                <br>
+                <div id ="youtubeplayer">
+                </div>
+                <script src = "youtube.js"></script>
+            </div>
+        </div>
+
+    </div>
+
+    <div class = "DesktopApp" id = "DesktopApp6" style = "width: 90px; height: 90px; cursor: pointer; padding-top: 64px; padding-left: 64px;">
+        <div style = "text-align: center; padding:18px; filter: drop-shadow(0 0 10px)">
+            <img src = "images (3).jpg" style = " width: 90px; height: 90px; border-radius: 18px;">
+            <p style = "margin: 0px; color: #FFFDD0; ">Kollywood Facts</p>
+        </div>
+
+    </div>
             
+    <div class = "window" id = "kollywoodfacts" style = "position: absolute; display: none; top: 20%; left: 40%; transform: translate (-50%, -50%); background-color: #F9E4BC;  border: 4mm ridge; width: fit-content; border-radius: 20px; padding: 20px; backdrop-filter: blur(10px); cursor: grab;">
+        <div class = "windowheader" id = "kollywoodfactsheader" style = "width: 100%; display: flex; align-items: center; cursor: grab; justify-content: space-between; margin-top: 10px;">
+            <p class="headertext" style = "margin: 0px; color: #6f0000; font-weight: 500; text-align:center">
+               <dfn>Kollywood Facts</dfn>
+            </p>
+            <p class = "closebutton" style = " cursor: pointer; font-size: x-large; margin-left: 14px; " id = "kollywoodfactsclose">
+                🎥
+            </p>
+        </div>
+
+        <div style = "background-color: #F9E4BC; margin: auto; align-items:center; border-radius: 14px; width: 520px; height:fit-content; padding: 20px; overflow: hidden;">
+            <div class = "carouselcontainer" style = "text-align: center; ">
+                    <div class = "carouselslide" style = " text-align: center;">
+                        <figure class = "slide">
+                            <figcaption><strong>The Iconic Title:</strong> The term "Kollywood" is a portmanteau of "Kodambakkam" and "Hollywood". <br> <br> <br> </figcaption>
+                        </figure>
+                        <figure class = "slide">
+                            <figcaption><strong>Rajinikanth’s Early Profession:</strong> Before becoming a superstar, Rajinikanth worked as a bus conductor for the Bangalore Transport Service. <br><br> </figcaption>
+                        </figure>
+                        <figure class = "slide">
+                            <figcaption><strong>Mani Ratnam's Education:</strong> Despite being one of India's most celebrated directors, Mani Ratnam has no formal film school training; he holds an MBA from Jamnalal Bajaj Institute of Management Studies. </figcaption>
+                        </figure>
+                        <figure class = "slide">
+                            <figcaption><strong>Panchamukhi Raga:</strong> Ilaiyaraaja is widely believed to have invented a brand-new Carnatic raga known as Panchamukhi.<br><br><br> </figcaption>
+                        </figure>
+                        <figure class = "slide">
+                            <figcaption><strong>Kamal Haasan's Debut:</strong> Kamal Haasan made his acting debut as a child artist in Kalathoor Kannamma (1960), winning the National Film Award for Best Child Artist.<br><br> </figcaption>
+                        </figure>
+                        <figure class = "slide">
+                            <figcaption><strong>Haasan's Multiple Roles:</strong> In Dasavathaaram (2008), Kamal Haasan became one of the few actors globally to play 10 distinct roles in a single film.</figcaption>
+                        </figure>
+                        <figure class = "slide">
+                            <figcaption><strong>Vijay's Directorial Debut:</strong>  The 1992 film Naalaiya Theerpu, which marked actor Vijay's debut, featured music composed by M.M. Srilekha, who was only 12 years old at the time. </figcaption>
+                        </figure>
+                        <figure class = "slide">
+                            <figcaption><strong>Suriya and Vijay's Bond:</strong> Both Vijay and Suriya are alumni of Loyola College, Chennai, where Vijay was a year senior to Suriya.</figcaption>
+                        </figure>
+                        <figure class = "slide">
+                            <figcaption><strong>Sivakarthikeyan's Roots:</strong> Sivakarthikeyan started his entertainment career as a television anchor and stand-up comedian before transitioning to lead roles. </figcaption>
+                        </figure>
+                        <figure class = "slide">
+                            <figcaption><strong>AR Rahman's Original Name:</strong> A.R. Rahman was born A.S. Dilip Kumar. He converted to Islam in 1989.</figcaption>
+                        </figure>
+                        <figure class = "slide">
+                            <figcaption><strong>First Oscar Wins:</strong> A.R. Rahman became the first Asian to win two Oscars in a single night (Best Original Score and Best Original Song) for Slumdog Millionaire (2008).</figcaption>
+                        </figure>
+                        <figure class = "slide">
+                            <figcaption><strong>Ilaiyaraaja's Milestone:</strong> The "Maestro" Ilaiyaraaja has composed music for over 1,000 films and was the first Asian to compose a full symphony for the Royal Philharmonic Orchestra.</figcaption>
+                        </figure>
+                        <figure class = "slide">
+                            <figcaption><strong>Ilaiyaraaja's Debut:</strong>His debut movie, Annakili (1976), altered the course of Tamil cinema music by merging authentic Tamil folk sounds with Western orchestration.</figcaption>
+                        </figure>
+                        <figure class = "slide">
+                            <figcaption><strong>Massive Output:</strong> Ilaiyaraaja has recorded an estimated 50,000 songs throughout his prolific career.</figcaption>
+                        </figure>
+                        <figure class = "slide">
+                            <figcaption><strong>A.R. Rahman:</strong> Oscar-winning composer A.R. Rahman started his career working as a keyboardist and arranger for Ilaiyaraaja.</figcaption>
+                        </figure>
+                        <figure class = "slide">
+                            <figcaption><strong>Sci-Fi Pioneer:</strong> Kaadhalan (1994) introduced high-concept visual effects and robotics concepts that were highly unusual for Tamil commercial cinema at the time.</figcaption>
+                        </figure>
+                        <figure class = "slide">
+                            <figcaption><strong>Vikram's Chameleon Acts:</strong> In Iru Mugam (2016), actor Vikram played both the protagonist (a RAW agent) and the primary antagonist (a criminal mastermind).</figcaption>
+                        </figure>
+                        <figure class = "slide">
+                            <figcaption><strong>Anirudh's Viral Debut:</strong> Composer Anirudh Ravichander skyrocketed to fame at age 21 with the viral hit song "Why This Kolaveri Di" from the film 3 (2012).</figcaption>
+                        </figure>
+                        <figure class = "slide">
+                            <figcaption><strong>Kamal's Multistarrer:</strong> Manmadhan Ambu (2010) and Vikram (2022) both feature Suriya in cameo appearances; he and Kamal Haasan shared screen space, though never physically in the same shot. </figcaption>
+                        </figure>
+                        <figure class = "slide">
+                            <figcaption><strong>Sivaji Ganesan’s Speed:</strong> The legendary Sivaji Ganesan famously memorized massive, complex scripts on the very first day of shooting.</figcaption>
+                        </figure>
+                        <figure class = "slide">
+                            <figcaption><strong>The 100th Milestone:</strong> Sivaji Ganesan acted in the iconic film Navarathri (1964), in which he played 9 different roles, making it his 100th film.</figcaption>
+                        </figure>
+                        <figure class = "slide">
+                            <figcaption><strong>Celebrity Siblings:</strong> Actresses Ambika and Radha were leading heroines and sisters who dominated the 1980s, similar to the sister duo of Radhika and Nirosha.</figcaption>
+                        </figure>
+                        <figure class = "slide">
+                            <figcaption><strong>The Longest Running Film:</strong> Chandralekha (1948), produced by Gemini Studios, was in production for over 5 years and became one of the most expensive and longest-running films of its time.</figcaption>
+                        </figure>
+                        <figure class = "slide">
+                            <figcaption><strong>AVM Studios:</strong> Founded in 1945, AVM Studios is one of the oldest, still-functioning film studios in Asia.</figcaption>
+                        </figure>
+                        <figure class = "slide">
+                            <figcaption><strong>Rajini’s Signature:</strong> The famous coin-flip cigarette trick Rajinikanth performs was actually inspired by a Hollywood western film, later stylized for Kollywood.</figcaption>
+                        </figure>
+                        <figure class = "slide">
+                            <figcaption><strong>Multi-Starrer LCU:</strong> Lokesh Kanagaraj built the Lokesh Cinematic Universe (LCU) by linking standalone films Kaithi (2019), Vikram (2022), and Leo (2023).</figcaption>
+                        </figure>
+                        <figure class = "slide">
+                            <figcaption><strong>Rural Realism</strong> 16 Vayathinile (1977) directed by Bharathiraja is considered a watershed moment for bringing rural realism to the screen.</figcaption>
+                        </figure>
+                        <figure class = "slide">
+                            <figcaption><strong>World Recognition: </strong>Nayagan (1987) was hailed by Time magazine as one of the best films in all of world cinema.</figcaption>
+                        </figure>
+                        <figure class = "slide">
+                            <figcaption><strong>Exploring Hidden Truths: </strong>Mani Ratnam's Kannathil Muthamittal (2002) is widely praised for its emotional depth and exploration of the Sri Lankan ethnic conflict. </figcaption>
+                        </figure>
+                        <figure class = "slide">
+                            <figcaption><strong>Rajinikanth's World Fame: </strong>His 1995 film Muthu became a massive pop-culture hit in Japan, leading to the phrase "Muthu-mania."</figcaption>
+                        </figure>
+                        <figure class = "slide">
+                            <figcaption><strong>Sivaji’s Accolades:</strong> Legendary actor Sivaji Ganesan was the first Indian actor to win an international award when he received the Best Actor award at the Afro-Asian Film Festival in 1960 for Veerapandiya Kattabomman.</figcaption>
+                        </figure>
+                        <figure class = "slide">
+                            <figcaption><strong>Rajinikanth's Entrance:</strong> Superstar Rajinikanth began his career playing negative and supporting roles (like in Apoorva Raagangal) before becoming an unstoppable commercial force.</figcaption>
+                        </figure>
+                        <figure class = "slide">
+                            <figcaption><strong>Triple Roles:</strong> Actors Ajith (in Varalaru), Suriya (in 24), and Vijay (in Mersal) have all showcased their versatility by playing triple roles in single films.</figcaption>
+                        </figure>
+                        <figure class = "slide">
+                            <figcaption><strong>Shankar's Grandeur:</strong> Director S. Shankar, known for blockbusters like Gentleman and Indian, is credited with introducing large-scale vigilante and VFX-heavy subjects to the masses. </figcaption>
+                        </figure>
+                        <figure class = "slide">
+                            <figcaption><strong>Cinematic Realism:</strong> In the film Baasha (1995), director Suresh Krishna used genuine, unscripted crowd reactions from real street shots to enhance the authenticity of the movie.</figcaption>
+                        </figure>
+                        <figure class = "slide">
+                            <figcaption><strong>Record Breaking FDFS:</strong> Major Tamil film releases often feature "First Day First Show" fan celebrations that start as early as 4:00 AM, making the opening day an event unmatched by most other film industries globally. </figcaption>
+                        </figure>
+                        <figure class = "slide">
+                            <figcaption><strong>Short Career, Huge Impact:</strong> Actress Asin ruled the Tamil film industry as a Tier 1 star but only starred in 11 Tamil films in her career.</figcaption>
+                        </figure>
+                        <figure class = "slide">
+                            <figcaption><strong>AR Rahman's Debut:</strong> Composer A.R. Rahman won a National Award for his very first soundtrack, Roja (1992), and went on to win two Academy Awards.</figcaption>
+                        </figure>
+                        <figure class = "slide">
+                            <figcaption><strong>One-Take Recordings:</strong>A.R.Rahman often retained the emotional rawness of demo tracks recorded in just one take.</figcaption>
+                        </figure>
+                        <figure class = "slide">
+                            <figcaption><strong>Record Time:</strong> Known for his speed, it is said Ilaiyaraaja could compose all the tunes for an entire film in under 30 minutes.</figcaption>
+                        </figure>
+                        
+                    </div>  
+                    <button class="nav-btn prev-btn" onclick="moveSlide(-1)">&#10094;</button>
+                    <button class="nav-btn next-btn" onclick="moveSlide(1)">&#10095;</button>  
+            </div>
+        </div>
+        
+
+            <script>
+            let currentIndex =0;
+            function moveSlide(direction) {
+                var slides = document.querySelectorAll('.slide');
+                var totalSlides = slides.length;
+                var slideContainer = document.querySelector('.carouselslide');
+
+                currentIndex += direction;
+
+                if (currentIndex >= totalSlides) {
+                    currentIndex = 0; 
+                } else if (currentIndex < 0) {
+                    currentIndex = totalSlides - 1;
+                }
+
+                slideContainer.style.transform = `translateX(-${currentIndex * 100}%)`;
+                }
+            </script>
+
+    </script>
+        </div>
+     </div>
 
     
     <script src= "script.js">

@@ -359,3 +359,43 @@ calculatorscreenopen.addEventListener ("click",
 );
 
 dragElement(document.querySelector("#calculator"))
+
+var youtubescreen = document.querySelector("#youtube")
+var youtubescreenopen = document.querySelector("#DesktopApp5")
+var youtubescreenclose = document.querySelector("#youtubeclose")
+
+youtubescreenclose.addEventListener("click", 
+  function ()
+  {
+    closewindow(youtubescreen)
+  }
+);
+
+youtubescreenopen.addEventListener("click", 
+  function ()
+  {
+    openwindow(youtubescreen)
+  }
+)
+
+dragElement(document.querySelector("#youtube"))
+
+var kollywoodfactsscreen = document.querySelector("#kollywoodfacts")
+var kollywoodfactsscreenopen = document.querySelector("#DesktopApp6")
+var kollywoodfactsscreenclose = document.querySelector("#kollywoodfactsclose")
+
+kollywoodfactsscreenclose.addEventListener("click", 
+  function()
+  {
+    closewindow(kollywoodfactsscreen)
+  }
+)
+
+kollywoodfactsscreenopen.addEventListener("click", 
+  function()
+  {
+    openwindow(kollywoodfactsscreen)
+  }
+)
+
+dragElement(document.querySelector("#kollywoodfacts"))
